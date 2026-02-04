@@ -2,7 +2,6 @@ from django.contrib import admin
 from . import models
 
 
-
-admin.site.register(models.Laptop)
-admin.site.register(models.Desktop)
-admin.site.register(models.Mobile)
+@admin.register(models.Laptop, models.Desktop, models.Mobile)
+class InventoryAdmin(admin.ModelAdmin):
+    pass
