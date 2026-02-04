@@ -1,3 +1,8 @@
 from django.contrib import admin
+from . import models
 
-# Register your models here.
+
+
+admin.site.register(models.Laptop)
+admin.site.register(models.Desktop)
+admin.site.register(models.Mobile)
