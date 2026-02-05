@@ -1,0 +1,6 @@
+type,price,status,issues
+iMac,1500,AVAILABLE,None
+Dell Inspiron,800,SOLD,HDD failure
+HP Pavilion,700,RESTOCKING,None
+Custom Gaming PC,1800,AVAILABLE,None
+Lenovo IdeaCentre,650,SOLD,Overheating

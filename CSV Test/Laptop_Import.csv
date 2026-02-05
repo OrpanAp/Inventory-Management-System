@@ -1,0 +1,6 @@
+type,price,status,issues
+MacBook Air,1200,AVAILABLE,None
+Dell XPS 13,1000,SOLD,Battery issue
+HP Spectre x360,1100,RESTOCKING,None
+Lenovo ThinkPad,950,AVAILABLE,Screen flicker
+Asus ZenBook,900,SOLD,None
