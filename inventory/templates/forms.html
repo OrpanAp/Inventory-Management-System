@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block body %}
+
+{% if pk %}
+    <form action="{% url action pk %}" method="post">
+{% else %}
+    <form action="{% url action %}" method="post">
+{% endif %}
+
+    {% csrf_token %}
+    {{ form }}
+    <button type="submit">Save</button>
+</form>
+
+{% endblock %}

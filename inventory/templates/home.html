@@ -4,35 +4,46 @@
 <br>
 
 <div class="btn-group">
-    <a href="" class="btn btn-primary btn-md" role="button">Laptops</a>
-    <a href="" class="btn btn-warning btn-sm" role="button">+</a>
+    <a href="{% url "inventory:display_laptops" %}" class="btn btn-primary btn-sm" role="button">Laptops</a>
+    <a href="{% url "inventory:add_laptops" %}" class="btn btn-warning btn-sm" role="button">+</a>
     
-    <a href="" class="btn btn-primary btn-md" role="button">Desktops</a>
-    <a href="" class="btn btn-warning btn-sm" role="button">+</a>
+    <a href="{% url "inventory:display_desktops" %}" class="btn btn-primary btn-sm" role="button">Desktops</a>
+    <a href="{% url "inventory:add_desktops" %}" class="btn btn-warning btn-sm" role="button">+</a>
     
-    <a href="" class="btn btn-primary btn-md" role="button">Mobiles</a>
-    <a href="" class="btn btn-warning btn-sm" role="button">+</a>
+    <a href="{% url "inventory:display_mobiles" %}" class="btn btn-primary btn-sm" role="button">Mobiles</a>
+    <a href="{% url "inventory:add_mobiles" %}" class="btn btn-warning btn-sm" role="button">+</a>
 </div>
 
+
+<h4>Viewing: {{ header }}</h4>
+<br>
 
 <table class="table table-hover">
     <thead>
         <tr>
-            <th>ID</th>
+            <th>#</th>
             <th>Model</th>
             <th>Price</th>
             <th>Status</th>
             <th>Issues</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
+        {% for device in devices %}
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>{{ forloop.counter }}</td>
+            <td>{{ device.type }}</td>
+            <td>{{ device.price }}</td>
+            <td>{{ device.status }}</td>
+            <td>{{ device.issues }}</td>
+            <td>
+                <a href="{% url edit device.pk %}" class="btn btn-primary btn-sm" role="button">Edit</a>
+                <a href="{% url delete device.pk %}" class="btn btn-danger btn-sm" role="button">Delete</a>
+
+            </td>
         </tr>
+        {% endfor %}
     </tbody>
 </table>
 
