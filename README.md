@@ -25,7 +25,6 @@
 - 📝 Add, edit, delete products  
 - 📦 Track stock levels in real-time  
 - 📊 Generate inventory & sales reports  
-- 🔒 Secure login for admins  
 
 ---
 
